@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+      "no-console": "off",
       "indent": ["error", 4],
       "vue/html-indent": ["error", 4],
       "vue/script-indent": ["error", 4]

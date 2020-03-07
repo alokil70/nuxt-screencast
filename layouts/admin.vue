@@ -1,12 +1,29 @@
 <template>
     <div>
-        <div id="theatre-body">
+        <div id="navbar">
+            <div id="navbar-links">
+                <nuxt-link to="/">Home</nuxt-link>
+                <nuxt-link to="/products">Products</nuxt-link>
+                <nuxt-link to="/admin">Admin</nuxt-link>
+            </div>
+        </div>
+        <div>
             <nuxt />
         </div>
     </div>
 </template>
 
 <style>
+#navbar {
+    height: 40px;
+    width: 90%;
+    background-color: #333;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
 /*html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -25,8 +42,5 @@
   box-sizing: border-box;
   margin: 0;
 }*/
-#theatre-body {
-    background-color: #47494e;
-    color: white;
-}
+
 </style>

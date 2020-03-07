@@ -51,6 +51,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
     axios: {
+        baseURL: 'http://192.168.0.195:9090/api'
     },
     /*
   ** Build configuration

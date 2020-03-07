@@ -1,24 +1,18 @@
 <template>
     <div>
-        <div v-for="prod in res" :key="prod.id">
-            <h1>Theatre</h1>
-        </div>
+        <h1>Admin</h1>
     </div>
 </template>
 
 <script>
 
 export default {
+    name: 'Admin',
+    layout: 'admin',
     components: {
-    },
-    async asyncData ({ $axios }) {
-        const response = await $axios.get('/products')
-        const res = response.data
-        return res
     }
 }
 </script>
-
 <style>
 .container {
     margin: 0 auto;
