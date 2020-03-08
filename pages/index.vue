@@ -1,50 +1,31 @@
 <template>
     <div>
-        <div v-for="prod in res" :key="prod.id">
-            <h1>Theatre</h1>
+        <h1>Theatre</h1>
+        <div class="d-flex flex-row mb-6">
+            <products-list
+                v-for="product in products"
+                :key="product.id"
+                :product="product"
+            />
         </div>
     </div>
 </template>
 
 <script>
+import ProductsList from '../components/ProductsList'
 
 export default {
     components: {
+        ProductsList
     },
     async asyncData ({ $axios }) {
         const response = await $axios.get('/products')
-        const res = response.data
-        return res
+        const products = response.data
+        return { products }
     }
 }
 </script>
 
 <style>
-.container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.title {
-    font-family: "Quicksand", "Source Sans Pro", -apple-system,
-        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-        sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-}
 
 </style>

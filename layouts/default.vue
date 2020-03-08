@@ -1,12 +1,20 @@
 <template>
     <div>
-        <div id="theatre-body">
+        <nuxt-link to="/admin" class="left-corner">
+            admin
+        </nuxt-link>
+        <v-content>
             <nuxt />
-        </div>
+        </v-content>
     </div>
 </template>
 
 <style>
+    .left-corner {
+        position: absolute;
+        color: white;
+        background-color: #333;
+    }
 /*html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

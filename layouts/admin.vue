@@ -1,29 +1,23 @@
 <template>
-    <div>
-        <div id="navbar">
-            <div id="navbar-links">
-                <nuxt-link to="/">Home</nuxt-link>
-                <nuxt-link to="/products">Products</nuxt-link>
-                <nuxt-link to="/admin">Admin</nuxt-link>
-            </div>
-        </div>
-        <div>
+    <v-app>
+        <v-app-bar app>
+            <v-btn text to="/">
+                home
+            </v-btn>
+            <v-btn text to="/products">
+                products
+            </v-btn>
+            <v-btn text to="/admin">
+                admin
+            </v-btn>
+        </v-app-bar>
+        <v-content>
             <nuxt />
-        </div>
-    </div>
+        </v-content>
+    </v-app>
 </template>
 
 <style>
-#navbar {
-    height: 40px;
-    width: 90%;
-    background-color: #333;
-}
-#navbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-}
 /*html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
