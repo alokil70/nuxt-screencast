@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h1>Theatre</h1>
-        <div class="d-flex flex-row mb-6">
-            <products-list
-                v-for="product in products"
-                :key="product.id"
-                :product="product"
-            />
+        <div>
+            <div class="d-flex flex-wrap">
+                <products-list
+                    v-for="product in products"
+                    :key="product.id"
+                    :product="product"
+                />
+            </div>
         </div>
     </div>
 </template>

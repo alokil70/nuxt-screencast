@@ -1,8 +1,40 @@
 <template>
     <v-card
-        width="340px"
+        max-width="325"
+        class="my-1 mx-1"
+        outlined
+        tile
+        elevation="20"
+        dark
+        color="grey darken-1"
+        shaped
     >
-        <v-card-title>{{ product.productName }}</v-card-title>
+        <v-img
+            height="350"
+            :src="`${URL}${product.imageName}`"
+            alt="img"
+            class="white--text align-end"
+        >
+            <v-col class="white--text text-center lightbox" cols="12">
+                <h1 class="display-1 font-weight-light">
+                    {{ product.productName }}
+                </h1>
+            </v-col>
+        </v-img>
+
+        <v-card-subtitle class="pb-0">
+            {{ product.price }} Руб
+        </v-card-subtitle>
+
+        <v-card-text class="text--primary">
+            <div>Whitehaven Beach</div>
+
+            <div>Whitsunday Island, Whitsunday Islands</div>
+        </v-card-text>
+
+        <v-card-actions>
+
+        </v-card-actions>
     </v-card>
 </template>
 
@@ -17,10 +49,19 @@ export default {
             }
         }
     },
-    data: () => ({})
+    data: () => ({
+        URL: 'http://192.168.0.195:9090/uploads/'
+    })
 }
 </script>
 
 <style scoped>
-
+    .lightbox {
+        box-shadow: 0 -40px 0 -1px inset rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.4) 0%,
+            transparent 82px
+        );
+    }
 </style>

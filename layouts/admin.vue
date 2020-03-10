@@ -1,6 +1,10 @@
 <template>
     <v-app>
-        <v-app-bar app>
+        <v-app-bar
+            app
+            color="indigo"
+            dark
+        >
             <v-btn text to="/">
                 home
             </v-btn>

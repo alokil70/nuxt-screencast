@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div>index prod</div>
 </template>
 
 <script>
