@@ -6,6 +6,25 @@
         <v-container fluid>
             <nuxt />
         </v-container>
+        <v-bottom-navigation
+            app
+            grow
+            color="white"
+            background-color="brown"
+            v-model="recent"
+        >
+            <v-btn value="recent">
+                <span class="display-1">Напитки</span>
+            </v-btn>
+
+            <v-btn value="favorites">
+                <span class="display-1">Мясо</span>
+            </v-btn>
+
+            <v-btn value="nearby">
+                <span class="display-1">Салаты</span>
+            </v-btn>
+        </v-bottom-navigation>
     </v-app>
 </template>
 

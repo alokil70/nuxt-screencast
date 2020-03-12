@@ -4,10 +4,10 @@
         class="my-1 mx-1"
         outlined
         tile
-        elevation="20"
+        flat
+        elevation="24"
         dark
-        color="grey darken-1"
-        shaped
+        color="brown darken-1"
     >
         <v-img
             height="350"
@@ -16,25 +16,25 @@
             class="white--text align-end"
         >
             <v-col class="white--text text-center lightbox" cols="12">
-                <h1 class="display-1 font-weight-light">
+                <h2
+                    class="display-1 font-weight-light font-weight-medium"
+                >
                     {{ product.productName }}
-                </h1>
+                </h2>
             </v-col>
         </v-img>
 
-        <v-card-subtitle class="pb-0">
+        <v-card-subtitle class="display-1 font-weight-bold pb-0">
             {{ product.price }} Руб
         </v-card-subtitle>
 
-        <v-card-text class="text--primary">
-            <div>Whitehaven Beach</div>
+        <v-card-text class="white--text font-italic font-weight-light">
+            <div>Бефстроганов из курицы - очень нежный и вкусный.</div>
 
-            <div>Whitsunday Island, Whitsunday Islands</div>
+            <div>Мясо в картофельной шубке - отказаться невозможно!</div>
         </v-card-text>
 
-        <v-card-actions>
-
-        </v-card-actions>
+        <v-card-actions />
     </v-card>
 </template>
 
@@ -50,7 +50,7 @@ export default {
         }
     },
     data: () => ({
-        URL: 'http://192.168.0.195:9090/uploads/'
+        URL: 'http://192.168.0.2:9090/uploads/'
     })
 }
 </script>
