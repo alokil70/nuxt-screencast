@@ -65,6 +65,7 @@ export default {
         }
     },
     server: {
-        port: 3333
+        port: 3333,
+        host: '0.0.0.0'
     }
 }

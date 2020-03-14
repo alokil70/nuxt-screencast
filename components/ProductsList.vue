@@ -1,13 +1,13 @@
 <template>
     <v-card
-        max-width="325"
+        max-width="380"
         class="my-1 mx-1"
         outlined
         tile
         flat
         elevation="24"
         dark
-        color="brown darken-1"
+        color="amber darken-4"
     >
         <v-img
             height="350"
@@ -24,7 +24,7 @@
             </v-col>
         </v-img>
 
-        <v-card-subtitle class="display-1 font-weight-bold pb-0">
+        <v-card-subtitle class="display-1 font-weight-light pb-0 text-right">
             {{ product.price }} Руб
         </v-card-subtitle>
 

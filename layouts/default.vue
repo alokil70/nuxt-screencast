@@ -3,14 +3,14 @@
         <nuxt-link to="/admin" class="left-corner">
             ADMIN
         </nuxt-link>
-        <v-container fluid>
+        <v-container fluid class="back--color">
             <nuxt />
         </v-container>
         <v-bottom-navigation
             app
             grow
             color="white"
-            background-color="brown"
+            background-color="orange"
             v-model="recent"
         >
             <v-btn value="recent">
@@ -33,5 +33,8 @@
         position: absolute;
         color: grey;
         text-decoration: none;
+    }
+    .back--color {
+        background-color: orange;
     }
 </style>
