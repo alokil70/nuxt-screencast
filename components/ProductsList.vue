@@ -50,7 +50,7 @@ export default {
         }
     },
     data: () => ({
-        URL: 'http://192.168.0.2:9090/uploads/'
+        URL: 'http://192.168.0.195:9090/uploads/'
     })
 }
 </script>

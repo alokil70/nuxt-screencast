@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-screencast",
+  "name": "marafon",
   "version": "1.0.0",
-  "description": "My kryptonian Nuxt.js project",
+  "description": "Marafon project",
   "author": "Alexandr",
   "private": true,
   "scripts": {

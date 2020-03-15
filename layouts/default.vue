@@ -1,38 +1,44 @@
 <template>
     <v-app>
-        <nuxt-link to="/admin" class="left-corner">
+        <v-toolbar
+            dark
+            color="orange"
+        >
+            <v-toolbar-title>
+                <v-btn to="/admin">
+                    Кафе Марафон
+                </v-btn>
+            </v-toolbar-title>
+            <v-spacer />
+            <v-tabs color="deep-purple" right>
+                <v-tab v-for="ctg in category" :key="ctg.id">
+                    {{ ctg.categoryName }}
+                </v-tab>
+            </v-tabs>
+        </v-toolbar>
+        <!--<nuxt-link " class="left-corner">
             ADMIN
-        </nuxt-link>
+        </nuxt-link>-->
         <v-container fluid class="back--color">
             <nuxt />
         </v-container>
-        <v-bottom-navigation
-            app
-            grow
-            color="white"
-            background-color="orange"
-            v-model="recent"
-        >
-            <v-btn value="recent">
-                <span class="display-1">Напитки</span>
-            </v-btn>
-
-            <v-btn value="favorites">
-                <span class="display-1">Мясо</span>
-            </v-btn>
-
-            <v-btn value="nearby">
-                <span class="display-1">Салаты</span>
-            </v-btn>
-        </v-bottom-navigation>
     </v-app>
 </template>
-
+<script>
+export default {
+    async asyncData ({ $axios }) {
+        const response = await $axios.get('/category')
+        const category = response.data
+        return { category }
+    }
+}
+</script>
 <style>
     .left-corner {
         position: absolute;
         color: grey;
         text-decoration: none;
+        font-size: 14px;
     }
     .back--color {
         background-color: orange;
